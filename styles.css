@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Dark Purple */
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    padding: 5px 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* About Section */
+.about {
+    padding: 10px 20px;
+    max-width: 1000px;
+    margin: auto;
+    border: 6px solid #4B0082; /* Purple Border */
+    border-radius: 10px;
+    background: black;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 40px; /* Added gap between About and Carousel */
+}
+
+.about h2 {
+    text-align: center;
+    color: #4B0082;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    margin-bottom: 40px; /* Added gap below carousel */
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 33.33%; /* Three items visible */
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+}
+
+.product {
+    border: 6px solid #4B0082; /* Purple Border */
+    padding: 20px;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product h3 {
+    margin: 10px 0;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+/* CTA Button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4B0082; /* Darker Purple */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #A020F0; /* Lighter Purple */
+}
+
+.shop-button {
+    margin: 40px 0;
+}
+
+/* Social Media Integration */
+.social-media {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #800080;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-icon:hover {
+    background: #A020F0;
+    color: white;
+}
+
+.follow-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}

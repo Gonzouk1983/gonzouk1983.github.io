@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gonzo Lab Creations</title>
+    <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <img src="https://i.imgur.com/FQYcE9N.png" alt="Header Image">
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about">
+        <h2>Welcome to Gonzo Lab Creations!</h2>
+        <p>We’re all about bold, clever designs with a hidden twist—if you get it, you get it! Our collection is packed with unique, cartoon-inspired artwork that blends creativity with a playful sense of humor. Whether it’s cheeky, nostalgic, or just a little bizarre, our designs bring personality to everything you wear and use.</p>
+        <p>Take a look around, find something that speaks to you, and let your style do the talking!</p>
+    </section>
+
+    <!-- Featured Products Section with Carousel -->
+    <div class="carousel">
+      <button class="carousel-btn" id="prev">❮</button>
+      <div class="carousel-container" id="carousel-container">
+          <div class="carousel-item product">
+              <img src="https://i.etsystatic.com/58197307/r/il/ed7352/6716107682/il_1588xN.6716107682_cy7w.jpg" alt="Product 1">
+              <h3>Duck Off Black Mug</h3>
+              <p>Duck Off</p>
+              <a href="https://www.etsy.com/uk/listing/1888313607/duck-off-black-mug-perfect-for-coffee" class="btn">View on Etsy</a>
+          </div>
+          <div class="carousel-item product">
+              <img src="https://i.etsystatic.com/58197307/r/il/a1a62f/6767924285/il_1588xN.6767924285_nnth.jpg" alt="Product 2">
+              <h3>Go Duck Yourself Mug</h3>
+              <p>Go Duck Yourself</p>
+              <a href="https://www.etsy.com/uk/listing/1874844324/go-duck-yourself-black-mug-perfect-for" class="btn">View on Etsy</a>
+          </div>
+          <div class="carousel-item product">
+              <img src="https://i.etsystatic.com/58197307/r/il/c912ad/6719891072/il_1588xN.6719891072_7hn5.jpg" alt="Product 3">
+              <h3>Duck Off T-shirt</h3>
+              <p>Duck Off</p>
+              <a href="https://www.etsy.com/uk/listing/1874124430/duck-graphic-tee-unisex-heavy-cotton-t" class="btn">View on Etsy</a>
+          </div>
+          <div class="carousel-item product">
+            <img src="https://i.etsystatic.com/58197307/r/il/3c1ccc/6767927489/il_1588xN.6767927489_thhq.jpg" alt="Product 1">
+            <h3>Duck Off Hoodie</h3>
+            <p>Duck Off</p>
+            <a href="https://www.etsy.com/uk/listing/1888313515/playful-ducky-off-unisex-hooded?ref=shop_home_active_4&logging_key=15a2025ab11cbfe4c5886a01fce58fedb3cd3678%3A1888313515" class="btn">View on Etsy</a>
+        </div>
+        <div class="carousel-item product">
+            <img src="https://i.etsystatic.com/58197307/r/il/c6f465/6764318149/il_1588xN.6764318149_s3re.jpg" alt="Product 2">
+            <h3>Go Duck Yourself T-shirt</h3>
+            <p>Go Duck Yourself</p>
+            <a href="https://www.etsy.com/uk/listing/1874161586/go-duck-yourself-graphic-tee-unisex?ref=shop_home_active_2&logging_key=2e7cb278d5ed80e5ba2d9c7f9490be1b97db56c4%3A1874161586" class="btn">View on Etsy</a>
+        </div>
+        <div class="carousel-item product">
+            <img src="https://i.etsystatic.com/58197307/r/il/c912ad/6719891072/il_1588xN.6719891072_7hn5.jpg" alt="Product 3">
+            <h3>Duck Off T-shirt</h3>
+            <p>Duck Off</p>
+            <a href="https://www.etsy.com/uk/listing/1874124430/duck-graphic-tee-unisex-heavy-cotton-t" class="btn">View on Etsy</a>
+        </div>
+      </div>
+      <button class="carousel-btn" id="next">❯</button>
+  </div>
+
+  <div class="social-media">
+    <a href="https://instagram.com/gonzo.lab" class="social-icon">
+        <img src="https://i.imgur.com/fnnY9Em.png" alt="Instagram">
+    </a>
+    <span class="follow-text">Follow us on Instagram</span>
+</div>
+
+
+
+  <!-- CTA Button -->
+  <div class="shop-button">
+      <a href="https://www.etsy.com/shop/GonzoLabCreations" class="btn">Visit the Shop</a>
+  </div>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById("carousel-container");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    const items = document.querySelectorAll(".carousel-item");
+    const visibleItems = 3; // Number of visible items
+    let index = 0;
+
+    function updateCarousel() {
+        const offset = -(index * (100 / visibleItems)); // Move by one item width
+        container.style.transform = `translateX(${offset}%)`;
+    }
+
+    next.addEventListener("click", function () {
+        if (index < items.length - visibleItems) {
+            index++;
+        } else {
+            index = 0; // Loop back to start
+        }
+        updateCarousel();
+    });
+
+    prev.addEventListener("click", function () {
+        if (index > 0) {
+            index--;
+        } else {
+            index = items.length - visibleItems; // Loop to last set
+        }
+        updateCarousel();
+    });
+
+    // Auto carousel every 3 seconds
+    setInterval(() => {
+        next.click();
+    }, 3000);
+});
+  </script>
+</body>
+</html>
